@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">KipmNotes</string>
+    <string name="home">Home</string>
+    <string name="study">Study</string>
+    <string name="placements">Placements</string>
+    <string name="skills">Skills</string>
+    <string name="about_us">About Us</string>
+    <string name="vscode_usefull_tricks">VSCODE Useful Tricks</string>
+    <string name="photoshop_designing">Photoshop Designing</string>
+    <string name="learn_github">Learn GitHub</string>
+    <string name="programming_language">Programming Language</string>
+    <string name="learn_python">Learn Python</string>
+    <string name="learn_java">learn Java</string>
+    <string name="learn_javascript">Learn Javascript</string>
+    <string name="learn_cpp">Learn CPP</string>
+    <string name="software_development">Software Development</string>
+    <string name="website_development">Website Development</string>
+    <string name="machine_learning">Machine Learning</string>
+    <string name="android_development">Android Development</string>
+    <string name="finalyear">FinalYear</string>
+    <string name="thirdyear">ThirdYear</string>
+    <string name="secondyear">SecondYear</string>
+    <string name="firstyear">FirstYear</string>
+    <string name="open_drawer">Open Drawer</string>
+    <string name="close_drawer">Close Drawer</string>
+    <string name="study_and_placement_app">Study and Placement App</string>
+    <string name="kipm">KIPM</string>
 </resources>
