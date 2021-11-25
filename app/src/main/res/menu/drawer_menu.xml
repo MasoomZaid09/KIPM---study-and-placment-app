@@ -86,4 +86,8 @@
         android:title="@string/about_us">
 
     </item>
+
+    <item
+        android:id="@+id/logOut"
+        android:title="@string/log_out"/>
 </menu>
