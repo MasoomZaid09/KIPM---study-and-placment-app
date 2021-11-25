@@ -77,6 +77,7 @@ class MainActivity : AppCompatActivity() {
                     binding.drawerLayout.closeDrawers()
                 }
 
+
 //                Programming language Clicks
                 R.id.python ->{
                     binding.drawerLayout.closeDrawers()
@@ -109,6 +110,7 @@ class MainActivity : AppCompatActivity() {
                     binding.drawerLayout.closeDrawers()
                 }
 
+
 //              Adding Clicks on LogOut
                 R.id.logOut ->{
                     mAuth.signOut()
@@ -118,7 +120,6 @@ class MainActivity : AppCompatActivity() {
             }
             return@setNavigationItemSelectedListener true
         }
-
 
 
     }

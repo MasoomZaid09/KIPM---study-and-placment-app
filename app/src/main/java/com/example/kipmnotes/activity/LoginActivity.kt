@@ -28,8 +28,10 @@ class LoginActivity : AppCompatActivity() {
     lateinit var binding : ActivityLoginBinding
     private lateinit var googleSignInClient: GoogleSignInClient
 
+
 //    Initialize Firebase in app
     private lateinit var auth:FirebaseAuth
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,7 +44,7 @@ class LoginActivity : AppCompatActivity() {
 
 
         //Add click Listerners on GoogleSignInButton
-        binding.googleButton.setOnClickListener {
+        binding.googleLoginButton.setOnClickListener {
             googleSignINMethod()
         }
     }
