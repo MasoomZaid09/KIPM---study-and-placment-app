@@ -1,11 +1,11 @@
-package com.example.kipmnotes
+package com.example.kipmnotes.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
+import com.example.kipmnotes.R
 import com.example.kipmnotes.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -20,13 +20,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(view)
 
 
-
 //      calling Toolbar function
         setUpToolbar()
 
 
 //       make hamburger icon working
-        val actionBarDrawerToggle = ActionBarDrawerToggle(this,binding.drawerLayout,R.string.open_drawer,R.string.close_drawer)
+        val actionBarDrawerToggle = ActionBarDrawerToggle(this,binding.drawerLayout,
+            R.string.open_drawer,
+            R.string.close_drawer
+        )
         binding.drawerLayout.addDrawerListener(actionBarDrawerToggle)
         actionBarDrawerToggle.syncState()
 
@@ -40,7 +42,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.home -> {
                     binding.drawerLayout.closeDrawers()
                 }
-                
+
 
 //                Adding clicks on Study Menu
                 R.id.firstYear -> {
