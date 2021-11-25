@@ -37,7 +37,7 @@
                 android:id="@+id/machineLearning"
                 android:title="@string/machine_learning"/>
             <item
-                android:id="@+id/Website"
+                android:id="@+id/website"
                 android:title="@string/website_development"/>
             <item
                 android:id="@+id/dsa"
@@ -80,7 +80,10 @@
         </menu>
     </item>
 
+
     <item
         android:id="@+id/about"
-        android:title="@string/about_us"/>
+        android:title="@string/about_us">
+
+    </item>
 </menu>
