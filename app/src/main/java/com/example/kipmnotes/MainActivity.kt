@@ -9,7 +9,7 @@ import com.example.kipmnotes.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var binding:ActivityMainBinding
+    private lateinit var binding:ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    fun setUpToolbar(){
+    private fun setUpToolbar(){
         setSupportActionBar(binding.toolbar)
         supportActionBar?.title = "KIPM NOTES"
         supportActionBar?.setHomeButtonEnabled(true)
@@ -40,5 +40,6 @@ class MainActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+
 
 }

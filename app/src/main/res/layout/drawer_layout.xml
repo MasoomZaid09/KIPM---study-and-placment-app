@@ -5,7 +5,7 @@
     android:background="@color/app_color">
 
     <TextView
-        android:id="@+id/Headername"
+        android:id="@+id/headerName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="55sp"
@@ -19,7 +19,7 @@
         android:textSize="15sp"
         android:textColor="@color/black"
         android:text="@string/study_and_placement_app"
-        android:layout_below="@id/Headername"
+        android:layout_below="@id/headerName"
         android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>

@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
         android:id="@+id/home"
         android:title="@string/home"/>
     <item
         android:id="@+id/study"
-        android:title="@string/study">
+        android:title="@string/study"
+        app:showAsAction="never">
         <menu>
             <item
                 android:id="@+id/firstYear"
-                android:title="@string/firstyear"/>
+                android:title="@string/firstYear"/>
             <item
                 android:id="@+id/secondYear"
-                android:title="@string/secondyear"/>
+                android:title="@string/secondYear"/>
             <item
                 android:id="@+id/thirdYear"
-                android:title="@string/thirdyear"/>
+                android:title="@string/thirdYear"/>
             <item
                 android:id="@+id/finalYear"
-                android:title="@string/finalyear"/>
+                android:title="@string/finalYear"/>
         </menu>
     </item>
 
@@ -74,7 +76,7 @@
                 android:title="@string/photoshop_designing"/>
             <item
                 android:id="@+id/vsCode"
-                android:title="@string/vscode_usefull_tricks"/>
+                android:title="@string/vscode_useful_tricks"/>
         </menu>
     </item>
 
