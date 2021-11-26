@@ -4,22 +4,10 @@
     android:layout_height="150dp"
     android:background="@color/app_color">
 
-    <TextView
-        android:id="@+id/headerName"
-        android:layout_width="wrap_content"
+    <ImageView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="55sp"
-        android:textColor="@color/black"
-        android:text="@string/kipm"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="15sp"
-        android:textColor="@color/black"
-        android:text="@string/study_and_placement_app"
-        android:layout_below="@id/headerName"
-        android:layout_centerHorizontal="true"/>
+        android:src="@drawable/loginlogo"/>
+
 
 </RelativeLayout>
