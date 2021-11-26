@@ -30,4 +30,9 @@
     <string name="email_address">Email Address</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
+    <string name="sign_in_using_linkedin">Sign-in using LinkedIn</string>
+    <string name="don_t_have_an_account_sign_up_now">Don\'t have an account? Sign up Now!</string>
+    <string name="sign_in_using_github">Sign-in using Github</string>
+    <string name="sign_in_using_facebook">Sign-in using Facebook</string>
+    <string name="sign_in_using_google">Sign-in using Google</string>
 </resources>

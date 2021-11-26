@@ -127,7 +127,7 @@ class MainActivity : AppCompatActivity() {
 //  Creating an function for setting up toolbar with hamburger icon
     private fun setUpToolbar(){
         setSupportActionBar(binding.toolbar)
-        supportActionBar?.title = "KIPM NOTES"
+        supportActionBar?.title = "Home"
         supportActionBar?.setHomeButtonEnabled(true)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }

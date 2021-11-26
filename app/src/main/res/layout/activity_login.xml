@@ -4,37 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/app_color"
+    android:background="@color/dull_white"
     tools:context=".activity.LoginActivity">
 
     <ImageView
         android:id="@+id/imgLogin"
         android:layout_width="300dp"
-        android:layout_height="130dp"
+        android:layout_height="100dp"
         android:src="@drawable/loginlogo"
-        android:layout_marginTop="100dp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"/>
 
     <EditText
         android:id="@+id/etLoginEmail"
-        android:layout_width="350dp"
+        android:layout_width="match_parent"
         android:layout_height="42dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginStart="28dp"
         android:hint="@string/email_address"
+        android:textSize="15sp"
         android:inputType="textEmailAddress"
         android:maxLength="25"
         android:layout_below="@id/imgLogin"
         android:layout_centerHorizontal="true"
-        android:textColorHint="@color/black"
         android:drawableStart="@drawable/ic_email"
         android:drawablePadding="5dp"
-        android:background="@drawable/rounded_shape"/>
+        android:textColorHint="@color/common_google_signin_btn_text_light_default"
+        android:background="@color/grey"/>
 
     <EditText
         android:id="@+id/etLoginPass"
-        android:layout_width="350dp"
+        android:layout_width="match_parent"
         android:layout_height="42dp"
         android:hint="@string/password"
-        android:background="@drawable/rounded_shape"
+        android:layout_marginEnd="28dp"
+        android:layout_marginStart="28dp"
+        android:textSize="15sp"
         android:inputType="textPassword"
         android:maxLength="8"
         android:layout_below="@id/etLoginEmail"
@@ -42,31 +47,90 @@
         android:layout_marginTop="13dp"
         android:drawableStart="@drawable/ic_password"
         android:drawablePadding="5dp"
-        android:textColorHint="@color/black"/>
+        android:textColorHint="@color/common_google_signin_btn_text_light_default"
+        android:background="@color/grey"/>
 
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="150dp"
-        android:layout_height="55dp"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
         android:layout_below="@id/etLoginPass"
         android:text="@string/login"
         android:textColor="@color/black"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="28dp"
-        android:layout_alignParentEnd="true"
-        android:theme="@style/Widget.AppCompat.Light.ActionButton.Overflow"
-        android:background="@drawable/button_shape"
-        android:drawableEnd="@drawable/ic_arrow"/>
+        android:background="@color/green"
+        android:layout_marginStart="28dp"/>
 
 
-    <com.google.android.gms.common.SignInButton
+    <Button
         android:id="@+id/googleLoginButton"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btnLogin"
-        android:layout_alignParentStart="true"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/btnLogin"
+        android:backgroundTint="@color/grey"
+        android:layout_marginEnd="28dp"
+        android:layout_marginStart="28dp"
+        android:textSize="12sp"
+        android:textColor="@color/black"
         android:layout_marginTop="30dp"
-        android:layout_marginLeft="22dp"
-        android:textSize="25sp" />
+        android:textAllCaps="false"
+        android:text="@string/sign_in_using_google"
+        tools:ignore="SmallSp" />
+
+    <Button
+        android:id="@+id/facebookLoginButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/googleLoginButton"
+        android:backgroundTint="@color/grey"
+        android:layout_marginEnd="28dp"
+        android:layout_marginStart="28dp"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="5dp"
+        android:textAllCaps="false"
+        android:text="@string/sign_in_using_facebook"
+        tools:ignore="SmallSp" />
+
+    <Button
+        android:id="@+id/githubLoginButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/facebookLoginButton"
+        android:backgroundTint="@color/grey"
+        android:layout_marginEnd="28dp"
+        android:layout_marginStart="28dp"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="5dp"
+        android:textAllCaps="false"
+        android:text="@string/sign_in_using_github"
+        tools:ignore="SmallSp" />
+
+    <Button
+        android:id="@+id/linkedinLoginButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/githubLoginButton"
+        android:backgroundTint="@color/grey"
+        android:layout_marginEnd="28dp"
+        android:layout_marginStart="28dp"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="5dp"
+        android:textAllCaps="false"
+        android:text="@string/sign_in_using_linkedin"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/txtRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="@string/don_t_have_an_account_sign_up_now"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:layout_centerInParent="true"/>
 
 </RelativeLayout>
