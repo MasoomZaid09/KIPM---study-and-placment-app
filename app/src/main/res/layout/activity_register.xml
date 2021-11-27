@@ -38,7 +38,6 @@
         android:layout_marginStart="22dp"
         android:textSize="18sp"/>
 
-
     <EditText
         android:id="@+id/etRegisterName"
         android:layout_width="match_parent"

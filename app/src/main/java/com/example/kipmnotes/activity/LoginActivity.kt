@@ -55,6 +55,13 @@ class LoginActivity : AppCompatActivity() {
         binding.googleLoginButton.setOnClickListener {
             googleSignINMethod()
         }
+
+//        Add clicks Listeners op Register text
+        binding.txtRegister.setOnClickListener {
+            val intent = Intent(this,RegisterActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     private fun googleSignINMethod(){
