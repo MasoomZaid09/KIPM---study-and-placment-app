@@ -1,8 +1,12 @@
 package com.example.kipmnotes.activity
 
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.SpannableString
+import android.text.Spanned
+import android.text.style.ForegroundColorSpan
 import android.widget.Toast
 import com.example.kipmnotes.R
 import com.example.kipmnotes.databinding.ActivityLoginBinding
@@ -41,6 +45,10 @@ class LoginActivity : AppCompatActivity() {
 
         //connect to app
         auth  = Firebase.auth
+
+
+//        Design Register text
+        changeColorTextView()
 
 
         //Add click Listerners on GoogleSignInButton
@@ -112,5 +120,19 @@ class LoginActivity : AppCompatActivity() {
     }
 
 
+
+    // Change color for designing purpose
+    private fun changeColorTextView(){
+
+        val mText = binding.txtRegister.text.toString()
+
+        val mSpannableString = SpannableString(mText)
+        val mRed = ForegroundColorSpan(Color.RED)
+
+        mSpannableString.setSpan(mRed,23,35,Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+
+        binding.txtRegister.text = mSpannableString
+
+    }
 
 }

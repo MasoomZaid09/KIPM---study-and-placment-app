@@ -37,8 +37,6 @@
     <string name="sign_in_using_google">Sign-in using Google</string>
     <string name="register">Register</string>
     <string name="confirm_password">Confirm Password</string>
-    <string name="password">Password</string>
-    <string name="email_address">Email Address</string>
     <string name="_1st_year_of_education">1st(year of education)</string>
     <string name="computer_science_branch">Computer Science(Branch)</string>
     <string name="bachler_of_engineering_course">Bachler of Engineering(Course)</string>
