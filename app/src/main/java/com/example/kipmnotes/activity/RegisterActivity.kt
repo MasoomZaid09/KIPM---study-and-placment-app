@@ -1,7 +1,12 @@
 package com.example.kipmnotes.activity
 
+import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.SpannableString
+import android.text.Spanned
+import android.text.style.ForegroundColorSpan
 import android.widget.EditText
 import com.example.kipmnotes.R
 import com.example.kipmnotes.databinding.ActivityLoginBinding
@@ -17,6 +22,17 @@ class RegisterActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+
+        // Design Login text
+        changeColorTextView()
+
+
+//        AgainLoginpage Call
+        binding.txtAgainLogin.setOnClickListener {
+            val intent = Intent(this,LoginActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
 //        Add ClickListerner on Register Button
         binding.btnRegister.setOnClickListener {
@@ -46,17 +62,17 @@ class RegisterActivity : AppCompatActivity() {
         setErrors(binding.etRegisterCourse,"Please Enter Your Course")
     }
     if (email.isEmpty()){
-        setErrors(binding.etRegisterName,"Please Enter Email")
+        setErrors(binding.etRegisterEmail,"Please Enter Email")
     }
     if (pass.isEmpty()){
-        setErrors(binding.etRegisterName,"Please Enter Password")
+        setErrors(binding.etRegisterPass,"Please Enter Password")
     }
     if (pass != confirmPass){
         setErrors(binding.etRegisterConfirmPass,"Password Do Not Match..!")
     }
-
-
-
+    val intent = Intent(this,MainActivity::class.java)
+    startActivity(intent)
+    finish()
 
     }
 
@@ -65,5 +81,24 @@ class RegisterActivity : AppCompatActivity() {
     private fun setErrors(view:EditText,error:String){
         view.setError(error)
     }
+
+
+
+    // Change color for designing purpose
+    private fun changeColorTextView(){
+
+        val mText = binding.txtAgainLogin.text.toString()
+
+        val mSpannableString = SpannableString(mText)
+        val mRed = ForegroundColorSpan(Color.RED)
+
+        mSpannableString.setSpan(mRed,23,30, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+
+        binding.txtAgainLogin.text = mSpannableString
+
+    }
+
+
+
 }
 

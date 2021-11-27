@@ -60,6 +60,7 @@ class LoginActivity : AppCompatActivity() {
         binding.txtRegister.setOnClickListener {
             val intent = Intent(this,RegisterActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
     }
@@ -141,5 +142,6 @@ class LoginActivity : AppCompatActivity() {
         binding.txtRegister.text = mSpannableString
 
     }
+
 
 }

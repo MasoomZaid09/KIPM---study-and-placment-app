@@ -116,6 +116,7 @@ class MainActivity : AppCompatActivity() {
                     mAuth.signOut()
                     val intent = Intent(this,LoginActivity::class.java)
                     startActivity(intent)
+                    finish()
                 }
             }
             return@setNavigationItemSelectedListener true
