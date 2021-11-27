@@ -52,7 +52,7 @@
         android:maxLength="25"
         android:layout_below="@id/txtMSG1"
         android:layout_centerHorizontal="true"
-        android:drawableStart="@drawable/ic_email"
+        android:drawableStart="@drawable/ic_person"
         android:drawablePadding="5dp"
         android:textColorHint="@color/common_google_signin_btn_text_light_default"
         android:background="@color/grey"/>
@@ -70,7 +70,7 @@
         android:maxLength="25"
         android:layout_below="@id/etRegisterName"
         android:layout_centerHorizontal="true"
-        android:drawableStart="@drawable/ic_email"
+        android:drawableStart="@drawable/ic_college"
         android:drawablePadding="5dp"
         android:textColorHint="@color/common_google_signin_btn_text_light_default"
         android:background="@color/grey"/>
@@ -88,7 +88,7 @@
         android:maxLength="25"
         android:layout_below="@id/etRegisterCollege"
         android:layout_centerHorizontal="true"
-        android:drawableStart="@drawable/ic_email"
+        android:drawableStart="@drawable/ic_course"
         android:drawablePadding="5dp"
         android:textColorHint="@color/common_google_signin_btn_text_light_default"
         android:background="@color/grey"/>
@@ -104,9 +104,9 @@
         android:layout_marginTop="10dp"
         android:inputType="text"
         android:maxLength="25"
-        android:layout_below="@id/etRegisterCollege"
+        android:layout_below="@id/etRegisterCourse"
         android:layout_centerHorizontal="true"
-        android:drawableStart="@drawable/ic_email"
+        android:drawableStart="@drawable/ic_branch"
         android:drawablePadding="5dp"
         android:textColorHint="@color/common_google_signin_btn_text_light_default"
         android:background="@color/grey"/>
@@ -124,7 +124,7 @@
         android:maxLength="25"
         android:layout_below="@id/etRegisterBranch"
         android:layout_centerHorizontal="true"
-        android:drawableStart="@drawable/ic_email"
+        android:drawableStart="@drawable/ic_person"
         android:drawablePadding="5dp"
         android:textColorHint="@color/common_google_signin_btn_text_light_default"
         android:background="@color/grey"/>
@@ -160,8 +160,8 @@
         android:maxLength="25"
         android:layout_below="@id/etRegisterEmail"
         android:layout_centerHorizontal="true"
-        android:drawableStart="@drawable/ic_email"
-        android:drawablePadding="5dp"
+        android:drawableStart="@drawable/ic_password"
+        android:drawablePadding="7dp"
         android:textColorHint="@color/common_google_signin_btn_text_light_default"
         android:background="@color/grey"/>
 
@@ -178,8 +178,8 @@
         android:maxLength="25"
         android:layout_below="@id/etRegisterPass"
         android:layout_centerHorizontal="true"
-        android:drawableStart="@drawable/ic_email"
-        android:drawablePadding="5dp"
+        android:drawableStart="@drawable/ic_password"
+        android:drawablePadding="7dp"
         android:textColorHint="@color/common_google_signin_btn_text_light_default"
         android:background="@color/grey"/>
 
