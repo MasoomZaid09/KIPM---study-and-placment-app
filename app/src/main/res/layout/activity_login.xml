@@ -106,7 +106,7 @@
         android:textAllCaps="false"
         android:text="@string/sign_in_using_github"
         tools:ignore="SmallSp" />
-    
+
 
     <TextView
         android:id="@+id/txtRegister"
