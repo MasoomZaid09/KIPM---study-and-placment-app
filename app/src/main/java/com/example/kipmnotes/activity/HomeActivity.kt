@@ -7,17 +7,17 @@ import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import com.example.kipmnotes.R
-import com.example.kipmnotes.databinding.ActivityMainBinding
+import com.example.kipmnotes.databinding.ActivityHomeBinding
 import com.google.firebase.auth.FirebaseAuth
 
-class MainActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity() {
 
-    private lateinit var binding:ActivityMainBinding
+    private lateinit var binding:ActivityHomeBinding
     private lateinit var mAuth:FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityHomeBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
 

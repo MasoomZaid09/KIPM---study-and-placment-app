@@ -85,7 +85,6 @@ class LoginActivity : AppCompatActivity() {
     }
 
 
-
 //  override this function for get actual result
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
@@ -103,7 +102,7 @@ class LoginActivity : AppCompatActivity() {
         CoroutineScope(Dispatchers.IO).launch {
             try {
                 auth.signInWithCredential(credentials)
-                val intent = Intent(this@LoginActivity,MainActivity::class.java)
+                val intent = Intent(this@LoginActivity,HomeActivity::class.java)
                 startActivity(intent)
                 finish()
 
@@ -120,7 +119,7 @@ class LoginActivity : AppCompatActivity() {
         super.onStart()
         val currentUser = auth.currentUser
         currentUser?.let{
-            val intent = Intent(this,MainActivity::class.java)
+            val intent = Intent(this,HomeActivity::class.java)
             startActivity(intent)
             finish()
         }

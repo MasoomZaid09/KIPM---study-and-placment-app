@@ -8,8 +8,6 @@ import android.text.SpannableString
 import android.text.Spanned
 import android.text.style.ForegroundColorSpan
 import android.widget.EditText
-import com.example.kipmnotes.R
-import com.example.kipmnotes.databinding.ActivityLoginBinding
 import com.example.kipmnotes.databinding.ActivityRegisterBinding
 
 class RegisterActivity : AppCompatActivity() {
@@ -70,9 +68,7 @@ class RegisterActivity : AppCompatActivity() {
     if (pass != confirmPass){
         setErrors(binding.etRegisterConfirmPass,"Password Do Not Match..!")
     }
-    val intent = Intent(this,MainActivity::class.java)
-    startActivity(intent)
-    finish()
+
 
     }
 
