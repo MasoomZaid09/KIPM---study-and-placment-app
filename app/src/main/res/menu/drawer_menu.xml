@@ -9,82 +9,25 @@
     <item
         android:id="@+id/study"
         android:title="@string/study"
-        app:showAsAction="never">
-        <menu>
-            <item
-                android:id="@+id/firstYear"
-                android:title="@string/firstYear"/>
-            <item
-                android:id="@+id/secondYear"
-                android:title="@string/secondYear"/>
-            <item
-                android:id="@+id/thirdYear"
-                android:title="@string/thirdYear"/>
-            <item
-                android:id="@+id/finalYear"
-                android:title="@string/finalYear"/>
-        </menu>
-    </item>
+        />
 
     <item
         android:id="@+id/placments"
-        android:title="@string/placements">
-        <menu>
-            <item
-                android:id="@+id/android"
-                android:title="@string/android_development"/>
-            <item
-                android:id="@+id/machineLearning"
-                android:title="@string/machine_learning"/>
-            <item
-                android:id="@+id/website"
-                android:title="@string/website_development"/>
-            <item
-                android:id="@+id/dsa"
-                android:title="@string/software_development"/>
-        </menu>
-    </item>
-
+        android:title="@string/placements"/>
     <item
         android:id="@+id/language"
-        android:title="@string/programming_language">
-        <menu>
-            <item
-                android:id="@+id/python"
-                android:title="@string/learn_python"/>
-            <item
-                android:id="@+id/java"
-                android:title="@string/learn_java"/>
-            <item
-                android:id="@+id/cpp"
-                android:title="@string/learn_cpp"/>
-            <item
-                android:id="@+id/javascript"
-                android:title="@string/learn_javascript"/>
-        </menu>
-    </item>
-
+        android:title="@string/programming_language"/>
     <item
         android:id="@+id/skills"
-        android:title="@string/skills">
-        <menu>
-            <item
-                android:id="@+id/git"
-                android:title="@string/learn_github"/>
-            <item
-                android:id="@+id/photshop"
-                android:title="@string/photoshop_designing"/>
-            <item
-                android:id="@+id/vsCode"
-                android:title="@string/vscode_useful_tricks"/>
-        </menu>
-    </item>
+        android:title="@string/skills"/>
 
+    <item
+        android:id="@+id/interview"
+        android:title="@string/interview_questions"/>
 
     <item
         android:id="@+id/about"
         android:title="@string/about_us">
-
     </item>
 
     <item

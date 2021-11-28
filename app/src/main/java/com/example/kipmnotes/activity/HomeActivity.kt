@@ -48,59 +48,29 @@ class HomeActivity : AppCompatActivity() {
 
 
 //                Adding clicks on Study Menu
-                R.id.firstYear -> {
+                R.id.study -> {
                     binding.drawerLayout.closeDrawers()
                 }
-                R.id.secondYear -> {
-                    binding.drawerLayout.closeDrawers()
-                }
-                R.id.thirdYear -> {
-                    binding.drawerLayout.closeDrawers()
-                }
-                R.id.finalYear -> {
-                    binding.drawerLayout.closeDrawers()
-                }
-
-
 
 //                Placements menues clicks
-                R.id.android -> {
-                    binding.drawerLayout.closeDrawers()
-                }
-                R.id.machineLearning -> {
-                    binding.drawerLayout.closeDrawers()
-                }
-                R.id.website -> {
-                    binding.drawerLayout.closeDrawers()
-                }
-                R.id.dsa -> {
+                R.id.placments -> {
                     binding.drawerLayout.closeDrawers()
                 }
 
 
 //                Programming language Clicks
-                R.id.python ->{
-                    binding.drawerLayout.closeDrawers()
-                }
-                R.id.java ->{
-                    binding.drawerLayout.closeDrawers()
-                }
-                R.id.javascript -> {
-                    binding.drawerLayout.closeDrawers()
-                }
-                R.id.cpp -> {
+                R.id.language ->{
                     binding.drawerLayout.closeDrawers()
                 }
 
 
-//             Adding clicks on Skills Menu items
-                R.id.git -> {
+//                Adding clicks on ExtraSkills
+                R.id.skills ->{
                     binding.drawerLayout.closeDrawers()
                 }
-                R.id.photshop -> {
-                    binding.drawerLayout.closeDrawers()
-                }
-                R.id.vsCode -> {
+
+//                Adding clicks on interview
+                R.id.interview ->{
                     binding.drawerLayout.closeDrawers()
                 }
 

@@ -3,7 +3,7 @@
     <string name="home">Home</string>
     <string name="study">Study</string>
     <string name="placements">Placements</string>
-    <string name="skills">Skills</string>
+    <string name="skills">Extra Skills</string>
     <string name="about_us">About Us</string>
     <string name="vscode_useful_tricks">VSCODE Useful Tricks</string>
     <string name="photoshop_designing">Photoshop Designing</string>
@@ -44,4 +44,5 @@
     <string name="name">Name</string>
     <string name="sign_up_to_get_started">Sign-up to get started</string>
     <string name="create_an_account">Create an Account</string>
+    <string name="interview_questions">Interview Questions</string>
 </resources>
