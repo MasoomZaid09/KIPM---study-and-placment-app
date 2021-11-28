@@ -68,9 +68,32 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
+
+
+
+
     }
 
 
+
+
+//    change color for designing purpose
+    private fun changeColorTextView(){
+
+        val mText = binding.txtRegister.text.toString()
+
+        val mSpannableString = SpannableString(mText)
+        val mRed = ForegroundColorSpan(Color.RED)
+
+        mSpannableString.setSpan(mRed,23,35,Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+
+        binding.txtRegister.text = mSpannableString
+
+    }
+
+
+//  Add Google Authentication
     private fun googleSignINMethod(){
         // Adding google sign in method in App
         val gso =  GoogleSignInOptions
@@ -103,7 +126,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
 
-//    get credential and take action according to data
+//    get credentials and perform authencations with Google
     private fun googleAuthFirFirebase(account:GoogleSignInAccount){
         val credentials = GoogleAuthProvider.getCredential(account.idToken,null)
         CoroutineScope(Dispatchers.IO).launch {
@@ -135,19 +158,6 @@ class LoginActivity : AppCompatActivity() {
     }
 
 
-    // Change color for designing purpose
-    private fun changeColorTextView(){
-
-        val mText = binding.txtRegister.text.toString()
-
-        val mSpannableString = SpannableString(mText)
-        val mRed = ForegroundColorSpan(Color.RED)
-
-        mSpannableString.setSpan(mRed,23,35,Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
-
-        binding.txtRegister.text = mSpannableString
-
-    }
 
 
 //  Create function for login user
@@ -181,7 +191,8 @@ class LoginActivity : AppCompatActivity() {
 }
 
 
-    //    used for show errors on edittext when empty
+
+//        used for show errors on edittext when empty
     private fun setErrors(view: EditText, error:String){
         view.setError(error)
     }
