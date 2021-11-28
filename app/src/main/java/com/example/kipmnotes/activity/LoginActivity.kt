@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.text.SpannableString
 import android.text.Spanned
 import android.text.style.ForegroundColorSpan
+import android.widget.EditText
 import android.widget.Toast
 import com.example.kipmnotes.R
 import com.example.kipmnotes.databinding.ActivityLoginBinding
@@ -18,10 +19,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.*
 import java.lang.Exception
 
 const val REQUEST_CODE_SIGN_IN = 0
@@ -47,8 +45,16 @@ class LoginActivity : AppCompatActivity() {
         auth  = Firebase.auth
 
 
+
 //        Design Register text
         changeColorTextView()
+
+
+
+//        Add click listeners on LoginButton
+        binding.btnLogin.setOnClickListener {
+            loginUser()
+        }
 
 
         //Add click Listerners on GoogleSignInButton
@@ -62,8 +68,8 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-
     }
+
 
     private fun googleSignINMethod(){
         // Adding google sign in method in App
@@ -96,6 +102,7 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+
 //    get credential and take action according to data
     private fun googleAuthFirFirebase(account:GoogleSignInAccount){
         val credentials = GoogleAuthProvider.getCredential(account.idToken,null)
@@ -114,6 +121,7 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+
 //  check login already or not
     override fun onStart() {
         super.onStart()
@@ -125,7 +133,6 @@ class LoginActivity : AppCompatActivity() {
         }
 
     }
-
 
 
     // Change color for designing purpose
@@ -140,6 +147,43 @@ class LoginActivity : AppCompatActivity() {
 
         binding.txtRegister.text = mSpannableString
 
+    }
+
+
+//  Create function for login user
+    private fun loginUser() {
+
+    val email = binding.etLoginEmail.text.toString()
+    val pass = binding.etLoginPass.text.toString()
+
+    if (email.isEmpty()) {
+        setErrors(binding.etLoginEmail, "Please enter your email")
+    }
+
+    if (pass.isEmpty()) {
+        setErrors(binding.etLoginPass, "Please enter correct password")
+    }
+
+    try {
+        auth.signInWithEmailAndPassword(email, pass).addOnSuccessListener {
+
+            val intent = Intent(this@LoginActivity, HomeActivity::class.java)
+            startActivity(intent)
+            finish()
+        }.addOnFailureListener {
+            Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()
+        }
+
+    } catch (e: Exception) {
+        Toast.makeText(this@LoginActivity, "Please Fill Credentials", Toast.LENGTH_LONG).show()
+    }
+
+}
+
+
+    //    used for show errors on edittext when empty
+    private fun setErrors(view: EditText, error:String){
+        view.setError(error)
     }
 
 

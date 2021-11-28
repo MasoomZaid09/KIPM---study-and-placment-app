@@ -46,8 +46,8 @@ class RegisterActivity : AppCompatActivity() {
 
         }
 
-
     }
+
 
 //    get data and create account using firebase
     private fun firebaseRegister(){
@@ -78,15 +78,20 @@ class RegisterActivity : AppCompatActivity() {
         setErrors(binding.etRegisterConfirmPass,"Password Do Not Match..!")
     }
 
-    auth.createUserWithEmailAndPassword(email,pass).addOnSuccessListener {
 
-        val intent  = Intent(this,HomeActivity::class.java)
-        startActivity(intent)
-        finish()
+    try {
+        auth.createUserWithEmailAndPassword(email,pass).addOnSuccessListener {
 
-    }.addOnFailureListener {
-        Toast.makeText(this,it.message, Toast.LENGTH_LONG).show()
-    }
+            val intent  = Intent(this,HomeActivity::class.java)
+            startActivity(intent)
+            finish()
+
+        }.addOnFailureListener {
+            Toast.makeText(this,it.message, Toast.LENGTH_LONG).show()
+        }
+    }catch (e:Exception){
+        Toast.makeText(this,"Please fill entries",Toast.LENGTH_LONG).show()
+        }
 
 
     }
