@@ -8,17 +8,25 @@ import android.text.SpannableString
 import android.text.Spanned
 import android.text.style.ForegroundColorSpan
 import android.widget.EditText
+import android.widget.Toast
 import com.example.kipmnotes.databinding.ActivityRegisterBinding
+import com.google.firebase.auth.FirebaseAuth
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.coroutineScope
 
 class RegisterActivity : AppCompatActivity() {
 
     lateinit var binding:ActivityRegisterBinding
+    lateinit var auth : FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
+//        get instance of firebase
+        auth  = FirebaseAuth.getInstance()
 
 
         // Design Login text
@@ -34,14 +42,15 @@ class RegisterActivity : AppCompatActivity() {
 
 //        Add ClickListerner on Register Button
         binding.btnRegister.setOnClickListener {
-            getInfoAndCheck()
+            firebaseRegister()
+
         }
 
 
     }
 
-//    get data and check valid or not
-    private fun getInfoAndCheck(){
+//    get data and create account using firebase
+    private fun firebaseRegister(){
 
     val fullName = binding.etRegisterName.text.toString()
     val collegeName = binding.etRegisterCollege.text.toString()
@@ -67,6 +76,16 @@ class RegisterActivity : AppCompatActivity() {
     }
     if (pass != confirmPass){
         setErrors(binding.etRegisterConfirmPass,"Password Do Not Match..!")
+    }
+
+    auth.createUserWithEmailAndPassword(email,pass).addOnSuccessListener {
+
+        val intent  = Intent(this,HomeActivity::class.java)
+        startActivity(intent)
+        finish()
+
+    }.addOnFailureListener {
+        Toast.makeText(this,it.message, Toast.LENGTH_LONG).show()
     }
 
 
