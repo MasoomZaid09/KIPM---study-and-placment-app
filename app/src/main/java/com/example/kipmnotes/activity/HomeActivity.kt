@@ -9,6 +9,7 @@ import androidx.core.view.GravityCompat
 import com.example.kipmnotes.R
 import com.example.kipmnotes.databinding.ActivityHomeBinding
 import com.example.kipmnotes.fragment.HomeFragment
+import com.example.kipmnotes.fragment.ProgrammingLanguage
 import com.google.firebase.auth.FirebaseAuth
 
 class HomeActivity : AppCompatActivity() {
@@ -70,6 +71,11 @@ class HomeActivity : AppCompatActivity() {
 
 //                Programming language Clicks
                 R.id.language ->{
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.frame, ProgrammingLanguage())
+                        .addToBackStack("language")
+                        .commit()
+                    supportActionBar?.title = "Programming Languages"
                     binding.drawerLayout.closeDrawers()
                 }
 
