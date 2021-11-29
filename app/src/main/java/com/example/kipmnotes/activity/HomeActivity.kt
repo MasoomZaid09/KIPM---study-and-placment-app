@@ -9,13 +9,14 @@ import androidx.core.view.GravityCompat
 import com.example.kipmnotes.R
 import com.example.kipmnotes.databinding.ActivityHomeBinding
 import com.example.kipmnotes.fragment.HomeFragment
-import com.example.kipmnotes.fragment.ProgrammingLanguage
+import com.example.kipmnotes.fragment.LanguageFragment
 import com.google.firebase.auth.FirebaseAuth
 
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var binding:ActivityHomeBinding
     private lateinit var mAuth:FirebaseAuth
+    var previouseMenuItem:MenuItem? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,6 +45,14 @@ class HomeActivity : AppCompatActivity() {
 
 //        Adding navigation clicks actions
         binding.navigationView.setNavigationItemSelectedListener {
+
+            if (previouseMenuItem != null){
+                previouseMenuItem?.isChecked = false
+            }
+            it.isCheckable= true
+            it.isChecked = true
+            previouseMenuItem = it
+
             when(it.itemId){
 
 
@@ -56,43 +65,42 @@ class HomeActivity : AppCompatActivity() {
 
 //                Adding clicks on Study Menu
                 R.id.study -> {
-//                    supportFragmentManager.beginTransaction()
-//                        .replace(R.id.frame,StudyFragment())
-//                        .addToBackStack("study")
-//                        .commit()
+                    supportActionBar?.title = "Study"
                     binding.drawerLayout.closeDrawers()
                 }
 
-//                Placements menues clicks
+//                Placements Menu clicks
                 R.id.placments -> {
+                    supportActionBar?.title = "Placements"
                     binding.drawerLayout.closeDrawers()
                 }
-
 
 //                Programming language Clicks
                 R.id.language ->{
                     supportFragmentManager.beginTransaction()
-                        .replace(R.id.frame, ProgrammingLanguage())
-                        .addToBackStack("language")
+                        .replace(R.id.frame, LanguageFragment())
                         .commit()
-                    supportActionBar?.title = "Programming Languages"
+                    supportActionBar?.title = "Pragramming Languages"
                     binding.drawerLayout.closeDrawers()
                 }
 
 
 //                Adding clicks on ExtraSkills
                 R.id.skills ->{
+                    supportActionBar?.title = "Skills"
                     binding.drawerLayout.closeDrawers()
                 }
 
 //                Adding clicks on interview
                 R.id.interview ->{
+                    supportActionBar?.title = "Skills"
                     binding.drawerLayout.closeDrawers()
                 }
 
 
 //              Adding clicks on About Menu
                 R.id.about -> {
+                    supportActionBar?.title = "About Us"
                     binding.drawerLayout.closeDrawers()
                 }
 
@@ -117,10 +125,9 @@ class HomeActivity : AppCompatActivity() {
         val fragment = HomeFragment()
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.frame,fragment)
-        transaction.addToBackStack("Home")
         transaction.commit()
         supportActionBar?.title = "Home"
-
+        binding.navigationView.setCheckedItem(R.id.home)
     }
 
 
@@ -140,6 +147,17 @@ class HomeActivity : AppCompatActivity() {
             binding.drawerLayout.openDrawer(GravityCompat.START)
         }
         return super.onOptionsItemSelected(item)
+    }
+
+
+//    Added backPressFunctionality
+    override fun onBackPressed() {
+        var frag = supportFragmentManager.findFragmentById(R.id.frame)
+        when(frag){
+            !is HomeFragment -> openHome()
+            else -> super.onBackPressed()
+        }
+
     }
 
 

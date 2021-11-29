@@ -4,12 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/dull_white"
-    tools:context=".fragment.ProgrammingLanguage">
+    tools:context=".fragment.LanguageFragment">
+
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textColor="@color/black"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/green"
+        android:layout_centerInParent="true"
+        android:textSize="35sp"
+        android:text="@string/page_in_progress" />
 
 </RelativeLayout>
