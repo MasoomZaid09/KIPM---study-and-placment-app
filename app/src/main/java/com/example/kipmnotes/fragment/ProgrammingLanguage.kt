@@ -7,16 +7,20 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.kipmnotes.R
 import com.example.kipmnotes.databinding.FragmentHomeBinding
+import com.example.kipmnotes.databinding.ProgrammingLanguageBinding
+
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-class HomeFragment : Fragment() {
 
-    private var _binding :FragmentHomeBinding? = null
+class ProgrammingLanguage : Fragment() {
+
+    private var _binding : ProgrammingLanguageBinding? = null
     private var param1: String? = null
     private var param2: String? = null
     private val binding get() = _binding!!
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,18 +35,10 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = ProgrammingLanguageBinding.inflate(inflater, container, false)
         val view = binding.root
-
-
-
-
-
         return view
-
-
     }
-
 
 
     override fun onDestroyView() {
@@ -52,10 +48,12 @@ class HomeFragment : Fragment() {
 
 
 
+
+
+
     companion object {
-        @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            HomeFragment().apply {
+            ProgrammingLanguage().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
