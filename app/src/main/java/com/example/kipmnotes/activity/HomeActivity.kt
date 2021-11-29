@@ -8,6 +8,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import com.example.kipmnotes.R
 import com.example.kipmnotes.databinding.ActivityHomeBinding
+import com.example.kipmnotes.fragment.HomeFragment
 import com.google.firebase.auth.FirebaseAuth
 
 class HomeActivity : AppCompatActivity() {
@@ -22,6 +23,10 @@ class HomeActivity : AppCompatActivity() {
         setContentView(view)
 
         mAuth = FirebaseAuth.getInstance()
+
+
+//      OpenHomeFragment with onStart
+        openHome()
 
 //      calling Toolbar function
         setUpToolbar()
@@ -43,12 +48,17 @@ class HomeActivity : AppCompatActivity() {
 
 //                home menu clicks
                 R.id.home -> {
+                    openHome()
                     binding.drawerLayout.closeDrawers()
                 }
 
 
 //                Adding clicks on Study Menu
                 R.id.study -> {
+//                    supportFragmentManager.beginTransaction()
+//                        .replace(R.id.frame,StudyFragment())
+//                        .addToBackStack("study")
+//                        .commit()
                     binding.drawerLayout.closeDrawers()
                 }
 
@@ -94,6 +104,20 @@ class HomeActivity : AppCompatActivity() {
 
 
     }
+
+
+//    OpenHomeFunction
+    private fun openHome(){
+        val fragment = HomeFragment()
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.frame,fragment)
+        transaction.addToBackStack("Home")
+        transaction.commit()
+        supportActionBar?.title = "Home"
+
+    }
+
+
 
 //  Creating an function for setting up toolbar with hamburger icon
     private fun setUpToolbar(){
