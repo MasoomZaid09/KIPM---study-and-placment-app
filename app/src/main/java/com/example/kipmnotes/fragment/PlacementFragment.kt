@@ -11,33 +11,28 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kipmnotes.R
 import com.example.kipmnotes.adapter.LanguageRecyclerAdapter
-import com.example.kipmnotes.databinding.FragmentHomeBinding
+import com.example.kipmnotes.adapter.PlacementRecyclerAdapter
+
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-
-class LanguageFragment : Fragment() {
-
+class PlacementFragment : Fragment() {
 
     private var param1: String? = null
     private var param2: String? = null
 
-    lateinit var recyclerLanguage:RecyclerView
+    lateinit var recyclerPlacement: RecyclerView
     lateinit var layoutManager: RecyclerView.LayoutManager
-    lateinit var recyclerAdapter:LanguageRecyclerAdapter
+    lateinit var recyclerAdapter: PlacementRecyclerAdapter
 
-    val languageList = arrayListOf<String>(
-        "  Learn Python",
-        "  Learn Java",
-        "  Learn C++",
-        "  Learn Javascript",
-        "  Learn C",
-        "  Learn SQL",
-        "  Learn R"
-        )
-
-
+    val placementTopicList = arrayListOf<String>(
+        "  Data Structure",
+        "  Algorithms",
+        "  Aptitude",
+        "  Interview Questions",
+        "  Project Ideas"
+    )
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -50,31 +45,30 @@ class LanguageFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val view = inflater.inflate(R.layout.fragment_placement, container, false)
 
-        val view = inflater.inflate(R.layout.fragment_language,container,false)
-
-
-        recyclerLanguage = view.findViewById(R.id.recyclerLanguage)
+        recyclerPlacement = view.findViewById(R.id.recyclerPlacement)
         layoutManager = LinearLayoutManager(activity)
 
-//        Added Divider b/w items
-        recyclerLanguage.addItemDecoration(
+
+//      Added Divider b/w items
+        recyclerPlacement.addItemDecoration(
             DividerItemDecoration(
-                recyclerLanguage.context,(layoutManager as LinearLayoutManager).orientation
+                recyclerPlacement.context,(layoutManager as LinearLayoutManager).orientation
             )
         )
 
-        recyclerAdapter = LanguageRecyclerAdapter(activity as Context,languageList)
-        recyclerLanguage.adapter = recyclerAdapter
-        recyclerLanguage.layoutManager = layoutManager
-        return view
 
+        recyclerAdapter = PlacementRecyclerAdapter(activity as Context,placementTopicList)
+        recyclerPlacement.adapter = recyclerAdapter
+        recyclerPlacement.layoutManager = layoutManager
+
+        return view
     }
 
     companion object {
-
         fun newInstance(param1: String, param2: String) =
-            LanguageFragment().apply {
+            PlacementFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

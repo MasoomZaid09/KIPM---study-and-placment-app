@@ -10,6 +10,7 @@ import com.example.kipmnotes.R
 import com.example.kipmnotes.databinding.ActivityHomeBinding
 import com.example.kipmnotes.fragment.HomeFragment
 import com.example.kipmnotes.fragment.LanguageFragment
+import com.example.kipmnotes.fragment.PlacementFragment
 import com.google.firebase.auth.FirebaseAuth
 
 class HomeActivity : AppCompatActivity() {
@@ -71,9 +72,13 @@ class HomeActivity : AppCompatActivity() {
 
 //                Placements Menu clicks
                 R.id.placments -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.frame,PlacementFragment())
+                        .commit()
                     supportActionBar?.title = "Placements"
                     binding.drawerLayout.closeDrawers()
                 }
+
 
 //                Programming language Clicks
                 R.id.language ->{
