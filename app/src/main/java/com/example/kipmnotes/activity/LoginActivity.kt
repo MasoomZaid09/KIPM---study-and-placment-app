@@ -21,6 +21,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.*
 import java.lang.Exception
+import com.google.android.gms.auth.api.Auth
 
 const val REQUEST_CODE_SIGN_IN = 0
 
@@ -45,17 +46,14 @@ class LoginActivity : AppCompatActivity() {
         auth  = Firebase.auth
 
 
-
 //        Design Register text
         changeColorTextView()
-
 
 
 //        Add click listeners on LoginButton
         binding.btnLogin.setOnClickListener {
             loginUser()
         }
-
 
         //Add click Listerners on GoogleSignInButton
         binding.googleLoginButton.setOnClickListener {
@@ -68,17 +66,10 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-
-
-
-
-
     }
 
 
-
-
-//    change color for designing purpose
+//  change color for designing purpose
     private fun changeColorTextView(){
 
         val mText = binding.txtRegister.text.toString()
@@ -107,7 +98,7 @@ class LoginActivity : AppCompatActivity() {
         googleSignInClient = GoogleSignIn.getClient(this, gso)
 
 
-        // intent through google signIn button
+    //  intent through google signIn button
         googleSignInClient.signInIntent.also {
             startActivityForResult(it, REQUEST_CODE_SIGN_IN)
         }
@@ -154,10 +145,7 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-
     }
-
-
 
 
 //  Create function for login user
@@ -187,15 +175,11 @@ class LoginActivity : AppCompatActivity() {
     } catch (e: Exception) {
         Toast.makeText(this@LoginActivity, "Please Fill Credentials", Toast.LENGTH_LONG).show()
     }
-
 }
 
-
-
-//        used for show errors on edittext when empty
+//  used for show errors on edittext when empty
     private fun setErrors(view: EditText, error:String){
         view.setError(error)
     }
-
 
 }
