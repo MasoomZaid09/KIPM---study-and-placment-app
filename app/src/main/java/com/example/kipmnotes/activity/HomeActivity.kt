@@ -8,10 +8,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import com.example.kipmnotes.R
 import com.example.kipmnotes.databinding.ActivityHomeBinding
-import com.example.kipmnotes.fragment.HomeFragment
-import com.example.kipmnotes.fragment.LanguageFragment
-import com.example.kipmnotes.fragment.PlacementFragment
-import com.example.kipmnotes.fragment.RoadmapFragment
+import com.example.kipmnotes.fragment.*
 import com.google.firebase.auth.FirebaseAuth
 
 class HomeActivity : AppCompatActivity() {
@@ -102,7 +99,10 @@ class HomeActivity : AppCompatActivity() {
 
 //                Adding clicks on ExtraSkills
                 R.id.skills ->{
-                    supportActionBar?.title = "Skills"
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.frame,SkillsFragment())
+                        .commit()
+                    supportActionBar?.title = "Extra SKills"
                     binding.drawerLayout.closeDrawers()
                 }
 
