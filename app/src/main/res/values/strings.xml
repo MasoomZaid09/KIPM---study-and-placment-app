@@ -48,4 +48,5 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="page_in_progress">Page in Progress...</string>
+    <string name="roadmaps">Roadmaps</string>
 </resources>

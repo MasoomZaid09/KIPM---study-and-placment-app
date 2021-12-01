@@ -11,6 +11,7 @@ import com.example.kipmnotes.databinding.ActivityHomeBinding
 import com.example.kipmnotes.fragment.HomeFragment
 import com.example.kipmnotes.fragment.LanguageFragment
 import com.example.kipmnotes.fragment.PlacementFragment
+import com.example.kipmnotes.fragment.RoadmapFragment
 import com.google.firebase.auth.FirebaseAuth
 
 class HomeActivity : AppCompatActivity() {
@@ -76,6 +77,15 @@ class HomeActivity : AppCompatActivity() {
                         .replace(R.id.frame,PlacementFragment())
                         .commit()
                     supportActionBar?.title = "Placements"
+                    binding.drawerLayout.closeDrawers()
+                }
+
+//              Roadmaps Menu Clicks
+                R.id.roadmaps ->{
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.frame,RoadmapFragment())
+                        .commit()
+                    supportActionBar?.title = "Roadmaps"
                     binding.drawerLayout.closeDrawers()
                 }
 
