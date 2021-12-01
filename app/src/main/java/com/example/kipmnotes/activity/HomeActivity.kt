@@ -64,6 +64,9 @@ class HomeActivity : AppCompatActivity() {
 
 //                Adding clicks on Study Menu
                 R.id.study -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.frame,StudyFragment())
+                        .commit()
                     supportActionBar?.title = "Study"
                     binding.drawerLayout.closeDrawers()
                 }
