@@ -98,10 +98,13 @@ class LoginActivity : AppCompatActivity() {
         googleSignInClient = GoogleSignIn.getClient(this, gso)
 
 
+
     //  intent through google signIn button
         googleSignInClient.signInIntent.also {
             startActivityForResult(it, REQUEST_CODE_SIGN_IN)
+
         }
+
     }
 
 
