@@ -1,5 +1,6 @@
 package com.example.kipmnotes.fragment
 
+import android.annotation.SuppressLint
 import android.graphics.Color
 import android.os.Bundle
 import android.text.method.LinkMovementMethod
@@ -31,6 +32,7 @@ class AboutFragment : Fragment() {
         }
     }
 
+    @SuppressLint("ResourceAsColor")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -44,16 +46,13 @@ class AboutFragment : Fragment() {
 
         // Linked with linkdin Profile
         aboutMasoom.setMovementMethod(LinkMovementMethod.getInstance())
-        aboutMasoom.setLinkTextColor(Color.BLUE)
+        aboutMasoom.setLinkTextColor(R.color.linkColor)
         aboutZakariya.setMovementMethod(LinkMovementMethod.getInstance())
-        aboutZakariya.setLinkTextColor(Color.BLUE)
+        aboutZakariya.setLinkTextColor(R.color.linkColor)
         aboutVishal.setMovementMethod(LinkMovementMethod.getInstance())
-        aboutVishal.setLinkTextColor(Color.BLUE)
-
-
+        aboutVishal.setLinkTextColor(R.color.linkColor)
+        
         return  view
-
-
     }
 
     companion object {
