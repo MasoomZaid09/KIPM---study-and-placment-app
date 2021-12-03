@@ -54,7 +54,6 @@ class HomeActivity : AppCompatActivity() {
 
             when(it.itemId){
 
-
 //                home menu clicks
                 R.id.home -> {
                     openHome()
@@ -118,6 +117,9 @@ class HomeActivity : AppCompatActivity() {
 
 //              Adding clicks on About Menu
                 R.id.about -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.frame,AboutFragment())
+                        .commit()
                     supportActionBar?.title = "About Us"
                     binding.drawerLayout.closeDrawers()
                 }
@@ -133,10 +135,7 @@ class HomeActivity : AppCompatActivity() {
             }
             return@setNavigationItemSelectedListener true
         }
-
-
     }
-
 
 //    OpenHomeFunction
     private fun openHome(){

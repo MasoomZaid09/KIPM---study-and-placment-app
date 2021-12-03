@@ -9,7 +9,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="app_color">#85D69E </color>
     <color name="red">#FF0000</color>
-    <color name="dull_white">#F5F5F5</color>
+    <color name="dull_white">#efeeee</color>
     <color name="grey">#DCDCDC</color>
     <color name="green">#006400</color>
+    <color name="blue">#0066FF</color>
 </resources>
