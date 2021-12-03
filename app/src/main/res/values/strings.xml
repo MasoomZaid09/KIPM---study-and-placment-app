@@ -54,7 +54,12 @@
     <string name="developers">Developers:</string>
     <string name="android_developer">Android Developer</string>
     <string name="masoom_zaid">Masoom Zaid</string>
-    <string name="know_more">know more</string>
+    <string name="masoomLinkedin"><a href="https://www.linkedin.com/in/masoom-zaid-3546b81b3/">Know more</a></string>
+    <string name="zakariyaLinkedin"><a href="https://www.linkedin.com/in/mohammadzakariya/">Know more</a></string>
+    <string name="vishalLinkedin"><a href="https://www.linkedin.com/in/vishal-kumar-a3b050222/">Know more</a></string>
     <string name="vishal_kumar">Vishal Kumar</string>
     <string name="mohammad_zakariya">Mohammad Zakariya</string>
+
+
+
 </resources>

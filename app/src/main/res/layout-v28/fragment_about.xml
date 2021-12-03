@@ -46,7 +46,7 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="0dp"
-            android:layout_height="125dp"
+            android:layout_height="120dp"
             android:src="@drawable/zakariya"
             android:layout_weight="4.0"
             app:civ_border_width="1dp"
@@ -81,13 +81,12 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/zakariyaMore"
+                android:id="@+id/aboutZakariya"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/know_more"
+                android:text="@string/zakariyaLinkedin"
                 android:textStyle="bold"
                 android:layout_below="@+id/zakariyaWork"
-                android:textColor="@color/blue"
                 android:textSize="16sp"
                 android:layout_marginTop="10dp"
                 android:layout_marginStart="10dp"
@@ -111,7 +110,7 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="0dp"
-            android:layout_height="125dp"
+            android:layout_height="120dp"
             android:src="@drawable/masoom"
             android:layout_weight="4.0"
             app:civ_border_width="1dp"
@@ -146,14 +145,13 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/masoomMore"
+                android:id="@+id/aboutMasoom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/masoomWork"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
-                android:text="@string/know_more"
-                android:textColor="@color/blue"
+                android:text="@string/masoomLinkedin"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:drawableEndCompat="@drawable/ic_right_arrow" />
@@ -176,7 +174,7 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="0dp"
-            android:layout_height="125dp"
+            android:layout_height="120dp"
             android:src="@drawable/vishal"
             android:layout_weight="4.0"
             app:civ_border_width="1dp"
@@ -211,14 +209,13 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/vishalMore"
+                android:id="@+id/aboutVishal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/vishalWork"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
-                android:text="@string/know_more"
-                android:textColor="@color/blue"
+                android:text="@string/vishalLinkedin"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:drawableEndCompat="@drawable/ic_right_arrow" />
